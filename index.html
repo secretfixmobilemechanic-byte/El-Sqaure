@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+  >
 
   <title>EL-Square</title>
 
@@ -14,8 +18,9 @@
     html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
       min-height: 100%;
-      background: #111;
+      background: #fffbed;
     }
 
     body {
@@ -24,21 +29,45 @@
       align-items: flex-start;
     }
 
+    .menu-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
     .menu {
       display: block;
       width: 100%;
-      max-width: 1200px;
       height: auto;
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (max-width: 600px) {
+      .menu-container {
+        width: 100%;
+        max-width: none;
+      }
+
+      .menu {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
     }
   </style>
 </head>
 
 <body>
-  <img
-    class="menu"
-    src="Menu.png"
-    alt="EL-Square Menu"
-  >
+
+  <main class="menu-container">
+    <img
+      class="menu"
+      src="Menu.png"
+      alt="Tacos El Square Menu"
+    >
+  </main>
+
 </body>
 </html>
